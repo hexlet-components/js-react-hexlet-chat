@@ -1,7 +1,5 @@
 # React App boilerplate
 
-[![Node CI](https://github.com/hexlet-boilerplates/react-application/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-boilerplates/react-application/actions)
-
 ## Setup
 
 ```bash
