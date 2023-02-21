@@ -1,4 +1,4 @@
-# React App boilerplate
+# [React App boilerplate](https://js-react-hexlet-chat.onrender.com/)
 
 ## Setup
 
