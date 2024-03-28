@@ -9,7 +9,7 @@ make install
 ## Development
 
 ```bash
-make start
+make develop
 ```
 On *localhost:3000*
 
