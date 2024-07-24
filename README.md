@@ -1,5 +1,11 @@
 # [React App boilerplate](https://frontend-chat-ru.hexlet.app)
 
+It's an example of a customized react-project with a backend-server. You can copy it to start developing chat project.
+
+## Requirements
+
+* Node.js & npm
+
 ## Setup
 
 ```bash
