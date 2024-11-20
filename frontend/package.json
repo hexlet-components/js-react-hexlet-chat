@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@hexlet/chat-server": "^2.0.2",
     "@reduxjs/toolkit": "^1.8.1",
     "@vitejs/plugin-react": "^4.3.2",
     "axios": "^0.27.2",
