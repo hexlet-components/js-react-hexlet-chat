@@ -1,11 +1,15 @@
 install:
-	npm ci
+	pnpm install --frozen-lockfile
 
 start:
-	npm start
+	pnpm start
 
 build:
-	npm build
+	pnpm run build
 
 lint:
-	npx biome check .
+	pnpm --silent run lint
+	pnpm --silent run format:check
+
+lint-fix:
+	pnpm --silent run lint:fix
