@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build --prefix frontend",
+    "build": "pnpm run build --prefix frontend",
     "start": "start-server -s ./frontend/dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd frontend && npm ci"
+    "postinstall": "cd frontend && pnpm install --frozen-lockfile",
+    "lint": "oxlint --config=.oxlintrc.json .",
+    "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --config=.oxlintrc.json --fix .",
+    "format": "oxfmt --ignore-path=.oxfmtignore .",
+    "format:check": "oxfmt --ignore-path=.oxfmtignore --check ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@hexlet/chat-server": "^2.0.4"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "devDependencies": {
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0"
   }
 }

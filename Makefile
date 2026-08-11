@@ -2,13 +2,13 @@ lint-frontend:
 	make -C frontend lint
 
 install:
-	npm ci
+	pnpm install --frozen-lockfile
 
 start-frontend:
 	make -C frontend start
 
 start-backend:
-	npx start-server -s ./frontend/dist
+	pnpm exec start-server -s ./frontend/dist
 
 deploy:
 	git push heroku main
@@ -21,4 +21,4 @@ develop:
 
 build:
 	rm -rf frontend/dist
-	npm run build
+	pnpm run build
