@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm run build --prefix frontend",
+    "build": "pnpm -C frontend run build",
     "start": "start-server -s ./frontend/dist",
-    "postinstall": "cd frontend && pnpm install --frozen-lockfile",
     "lint": "oxlint --config=.oxlintrc.json .",
     "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --config=.oxlintrc.json --fix .",
     "format": "oxfmt --ignore-path=.oxfmtignore .",
@@ -21,5 +20,6 @@
   "devDependencies": {
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0"
-  }
+  },
+  "private": true
 }

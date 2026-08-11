@@ -34,10 +34,14 @@
     "start": "npx start-server -s ./dist",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "biome check ."
+    "lint": "oxlint --config=.oxlintrc.json .",
+    "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --config=.oxlintrc.json --fix .",
+    "format": "oxfmt --ignore-path=.oxfmtignore .",
+    "format:check": "oxfmt --ignore-path=.oxfmtignore --check ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.4"
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0"
   },
   "browserslist": {
     "production": [
