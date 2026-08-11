@@ -22,3 +22,7 @@ develop:
 build:
 	rm -rf frontend/dist
 	pnpm run build
+
+lint:
+	pnpm --silent run lint
+	pnpm --silent run format:check
