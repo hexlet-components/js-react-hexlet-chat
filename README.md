@@ -2,6 +2,14 @@
 
 It's an example of a customized react-project with a backend-server. You can copy it to start developing chat project.
 
+## Зачем это нужно
+
+Заготовка чата на React с готовым бэкендом. С неё начинают проект по чату:
+поднимается сервер, есть авторизация и каналы, дальше студент дописывает
+клиент.
+
+То есть это не пример для чтения, а стартовая точка: копируется и правится.
+
 ## Requirements
 
 * Node.js & npm
