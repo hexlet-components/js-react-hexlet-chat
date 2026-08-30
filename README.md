@@ -12,7 +12,7 @@ It's an example of a customized react-project with a backend-server. You can cop
 
 ## Requirements
 
-* Node.js & npm
+- Node.js & npm
 
 ## Setup
 
@@ -25,7 +25,8 @@ make install
 ```bash
 make develop
 ```
-On *localhost:3000*
+
+On _localhost:3000_
 
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io/?utm_source=github&utm_medium=link&utm_campaign=react-application)
 
