@@ -29,9 +29,11 @@ jobs:
 
       - name: Install
         run: make install
-      # Сборка фронтенда проверяется в CI: у заготовки нет тестов, и поломанный
-      # импорт или отсутствующая зависимость иначе доедут до студента.
+      # Сборка фронтенда проверяется в CI: поломанный импорт или отсутствующая
+      # зависимость иначе доедут до студента.
       - name: Build frontend
         run: make build
+      - name: Run tests
+        run: make test
       - name: Run linter
         run: make lint
