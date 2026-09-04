@@ -4,13 +4,15 @@ It's an example of a customized react-project with a backend-server. You can cop
 
 ## Зачем это нужно
 
-Заготовка чата на React с готовым бэкендом. С неё начинают проект по чату: поднимается сервер, есть авторизация и каналы, дальше студент дописывает клиент.
+Заготовку копируют для работы над учебным проектом по чату. В клиенте настроены сборка Vite, тема и уведомления Mantine, переводы i18next и подключение к Socket.IO. При запуске страница показывает заголовок Hexlet Chat.
 
-То есть это не пример для чтения, а стартовая точка: копируется и правится.
+Пакет `@hexlet/chat-server` предоставляет сервер с авторизацией, каналами и сообщениями. Формы входа и регистрации, маршрутизацию, список каналов и обмен сообщениями в клиенте реализует студент по шагам проекта.
+
+Для следующих шагов установлены React Router, `@mantine/form`, Zustand, TanStack Query и `leo-profanity`. Студент подключает их по мере реализации приложения.
 
 ## Requirements
 
-- Node.js & npm
+- Node.js 26 & npm 11
 
 ## Setup
 
@@ -24,7 +26,7 @@ make install
 make develop
 ```
 
-On _localhost:3000_
+Open <http://localhost:5002>. The API server listens on port 5001; Vite proxies API requests and Socket.IO connections to it.
 
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io/?utm_source=github&utm_medium=link&utm_campaign=react-application)
 
