@@ -1,25 +1,63 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "pnpm -C frontend run build",
-    "start": "start-server -s ./frontend/dist",
+    "dev": "vite",
+    "start": "start-server -s ./dist",
+    "build": "vite build",
+    "serve": "vite preview",
     "lint": "oxlint --config=.oxlintrc.json .",
     "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --config=.oxlintrc.json --fix .",
     "format": "oxfmt --ignore-path=.oxfmtignore .",
     "format:check": "oxfmt --ignore-path=.oxfmtignore --check ."
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@hexlet/chat-server": "^2.0.4"
+    "@hexlet/chat-server": "^2.0.4",
+    "@mantine/core": "^9.5.1",
+    "@mantine/form": "^9.5.1",
+    "@mantine/hooks": "^9.5.1",
+    "@mantine/notifications": "^9.5.1",
+    "@tabler/icons-react": "^3.46.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "axios": "^0.27.2",
+    "concurrently": "^7.2.1",
+    "debug": "^4.3.4",
+    "i18next": "^26.3.6",
+    "leo-profanity": "^1.5.0",
+    "lodash": "^4.17.21",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-i18next": "^17.0.11",
+    "react-router-dom": "^6.3.0",
+    "react-scroll": "^1.8.7",
+    "rollbar": "^2.25.0",
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1",
+    "vite": "^5.4.8",
+    "zustand": "^5.0.15"
   },
-  "packageManager": "pnpm@11.24.0",
   "devDependencies": {
+    "i18next-cli": "^1.69.2",
     "oxfmt": "^0.65.0",
     "oxlint": "^1.80.0"
   },
-  "private": true
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "packageManager": "pnpm@11.24.0",
+  "author": "",
+  "license": "ISC"
 }
