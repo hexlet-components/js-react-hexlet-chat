@@ -28,6 +28,11 @@ start-frontend:
 develop:
 	make start-backend & make start-frontend
 
+# Смоук проверяет контракт точки входа: проверка проекта зовёт init со своим
+# сокетом и рендерит то, что он вернул.
+test:
+	npm run --silent test
+
 lint:
 	npm run --silent lint
 	npm run --silent format:check
