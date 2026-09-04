@@ -7,6 +7,7 @@
     "start": "start-server -s ./dist",
     "build": "vite build",
     "serve": "vite preview",
+    "test": "vitest run",
     "lint": "oxlint --config=.oxlintrc.json .",
     "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --config=.oxlintrc.json --fix .",
     "format": "oxfmt --ignore-path=.oxfmtignore .",
@@ -40,7 +41,8 @@
   "devDependencies": {
     "i18next-cli": "^1.69.2",
     "oxfmt": "^0.65.0",
-    "oxlint": "^1.80.0"
+    "oxlint": "^1.80.0",
+    "vitest": "^3.2.7"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
