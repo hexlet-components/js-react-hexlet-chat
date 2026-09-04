@@ -57,7 +57,10 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "pnpm@11.24.0",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "allowScripts": {
+    "esbuild": true,
+    "@swc/core": false
+  }
 }

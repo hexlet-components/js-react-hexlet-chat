@@ -1,28 +1,39 @@
+# Это заготовка учебного проекта по чату: студент копирует её себе и дописывает.
+# Поэтому зависимости ставит npm, с которым работает сам проект. pnpm здесь не
+# используется намеренно, иначе студент получает менеджер пакетов, о котором
+# шаги проекта не говорят.
+#
+# Поле allowScripts в package.json решает то же, что раньше решал allowBuilds в
+# pnpm-workspace.yaml: npm с 11-й версии не запускает postinstall зависимостей
+# без явного разрешения. esbuild разрешён, потому что его скрипт готовит
+# нативный бинарь. У @swc/core скрипт только проверяет биндинг, он приезжает
+# зависимостью i18next-cli, и ни установке, ни запуску не нужен.
+
 install:
-	pnpm install --frozen-lockfile
+	npm ci
 
 build:
 	rm -rf dist
-	pnpm run build
+	npm run build
 
 start:
 	make start-backend
 
 start-backend:
-	pnpm exec start-server -s ./dist
+	npx start-server -s ./dist
 
 start-frontend:
-	pnpm run dev
+	npm run dev
 
 develop:
 	make start-backend & make start-frontend
 
 lint:
-	pnpm --silent run lint
-	pnpm --silent run format:check
+	npm run --silent lint
+	npm run --silent format:check
 
 lint-fix:
-	pnpm --silent run lint:fix
+	npm run --silent lint:fix
 
 # Ключи переводов вынимаются из кода: руками src/locales/ru/translation.json не
 # правится, правится текст под уже вынутым ключом.
